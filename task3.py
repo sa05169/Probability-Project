@@ -17,17 +17,17 @@ def Round_Simulation(Radius):
     Curr_Pos = list()
     myBot = list()
     for _ in range(Bots):
-        Curr_Pos.append( (0,0) )
+        Curr_Pos.append( (0,0) )                                #Initial position of bots           
         myBot.append( list() )
 
     for Step in range(Time):
         
         for bot in range(Bots):
-            dr = Step_Size[ random.randint(0,2) ]
+            dr = Step_Size[ random.randint(0,2) ]               #Randomly selects one of the step sizes and orientation
             dt = Orientation[ random.randint(0, 3) ]
 
             x, y = Curr_Pos[bot]
-            dx, dy = dr * math.cos(dt), dr * math.sin(dt)
+            dx, dy = dr * math.cos(dt), dr * math.sin(dt)       #Converts the movement into cartesian coordinates
 
             if (x + dx)**2 + (y + dy)**2 > Radius**2:
                 Curr_Pos[bot] = (x - dx, y - dy)
