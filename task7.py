@@ -12,8 +12,8 @@ direction [0 ~ 360].
 """
 
 def Round_Simulation(Radius):
-    Time = 10
-    Bots = 10
+    Time = 100
+    Bots = 100
     
     Step_Size = [0, 0.5, 1]                                     # discrete steps
     
@@ -41,4 +41,4 @@ def Round_Simulation(Radius):
 
     return Curr_Pos
 
-print(Round_Simulation(100))
+print("Bots are standing at point:", Round_Simulation(100))
