@@ -1,5 +1,6 @@
 import random
 import math
+import numpy
 
 """ ----------------------------------- TASK 1 -----------------------------------------
 Create a one-dimensional random walk mathematical and simulation-based model to predict the
@@ -22,7 +23,7 @@ def Expected_Position(P_left, P_right, Time, Init_Pos = 0):
         
         for bot in range(1000):             # move all bots by one step
             
-            Vector = random.randint(0, 1000) / 1000         # choose uniformly within continuous [0, 1]
+            Vector = numpy.random.uniform(0.0, 1.0)         # choose uniformly within continuous [0, 1]
             
             if Vector < P_left:                             # Vector coming in range of left
                 Simulation_Bots[bot] -= 1

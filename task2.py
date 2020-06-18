@@ -1,5 +1,6 @@
 import random
 import math
+import numpy
 
 """ ----------------------------------- TASK 2 -----------------------------------------
 Create a one-dimensional random walk mathematical and simulation-based model where two
@@ -27,7 +28,7 @@ def Expected_Time(A_left, A_right, B_left, B_right, Distance):
 
     def Take_A_Step(my_Bots, P_left, P_right):      # simulates given bots by one step
         for bot in range(len(my_Bots)):
-            Vector = random.randint(0, 1000) / 1000
+            Vector = numpy.random.uniform(0.0, 1.0)
             
             if Vector < P_left:
                 my_Bots[bot] -= 1

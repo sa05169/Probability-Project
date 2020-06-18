@@ -1,5 +1,6 @@
 import random
 import math
+import numpy
 
 """ ----------------------------------- TASK 5 -----------------------------------------
 Repeat task 3 by assuming that the step size and the orientation are continuous random variables
@@ -25,8 +26,8 @@ def Round_Simulation(Radius):
     for Step in range(Time):
         
         for bot in range(Bots):
-            dr = random.randint(0, 1000) / 1000
-            dt = 2 * math.pi * random.randint(0, 1000) / 1000
+            dr = numpy.random.uniform(0.0, 1.0)
+            dt = 2 * math.pi * numpy.random.uniform(0.0, 1.0)
 
             x, y = Curr_Pos[bot]
             dx, dy = dr * math.cos(dt), dr * math.sin(dt)

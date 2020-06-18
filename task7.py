@@ -1,5 +1,6 @@
 import random
 import math
+import numpy
 
 """ ----------------------------------- TASK 7 -----------------------------------------
 Repeat task 3 by assuming that the step size is a discrete random variable and the orientation is a
@@ -26,7 +27,7 @@ def Round_Simulation(Radius):
         
         for bot in range(Bots):
             dr = Step_Size[ random.randint(0,2) ]
-            dt = 2 * math.pi * random.randint(0, 1000) / 1000
+            dt = 2 * math.pi * numpy.random.uniform(0.0, 1.0)
 
             x, y = Curr_Pos[bot]
             dx, dy = dr * math.cos(dt), dr * math.sin(dt)

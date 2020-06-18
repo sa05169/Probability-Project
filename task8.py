@@ -1,5 +1,6 @@
 import random
 import math
+import numpy
 
 """ ----------------------------------- TASK 8 -----------------------------------------
 Building on task 5, each team will capture the trajectory of two nodes whose initial locations are
@@ -14,8 +15,8 @@ def Distance(P1, P2):
     
 
 def Pick_from_Circ(Radius):
-    dt = 2 * math.pi * random.randint(0, 1000) / 1000
-    dr = math.sqrt( Radius**2  * random.randint(0,1000) / 1000)
+    dt = 2 * math.pi * numpy.random.uniform(0.0, 1.0)
+    dr = math.sqrt( Radius**2  * numpy.random.uniform(0.0, 1.0))
     return (math.cos(dt) * dr, math.sin(dt) * dr)
 
 def Expected_Time(Radius):
@@ -44,8 +45,8 @@ def Expected_Time(Radius):
         for bot in range(len(my_Bots)):
             x,y = my_Bots[bot]
             
-            dr = random.randint(0, 1000) / 1000
-            dt = 2 * math.pi * random.randint(0, 1000) / 1000
+            dr = numpy.random.uniform(0.0, 1.0)
+            dt = 2 * math.pi * numpy.random.uniform(0.0, 1.0)
             
             dx = dr * math.cos(dt)
             dy = dr * math.sin(dt)
