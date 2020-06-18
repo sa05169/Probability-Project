@@ -37,7 +37,7 @@ def Round_Simulation(Radius):
             else:
                 Curr_Pos[bot] = (x + dx, y + dy)
 
-            myBot[bot].append(Curr_Pos)
+            myBot[bot].append(Curr_Pos[bot])
 
     return Curr_Pos
 
