@@ -20,8 +20,8 @@ def Pick_from_Circ(Radius):
     return (math.cos(dt) * dr, math.sin(dt) * dr)
 
 def Expected_Time(Radius):
-    Bots = 200
-    Time = 200
+    Bots = 100
+    Time = 100
 
     A = Pick_from_Circ(Radius)
     B = Pick_from_Circ(Radius)
@@ -77,4 +77,4 @@ def Expected_Time(Radius):
         
     return sum([Step * Meetings[Step] for Step in range(Time)]) / Total_Meets
 
-print(Expected_Time(10))
+print('Expected time to meet:', Expected_Time(10))

@@ -8,8 +8,8 @@ direction [0 ~ 360].
 """
 
 def Round_Simulation(Radius):
-    Time = 10
-    Bots = 10
+    Time = 100
+    Bots = 100
     
     Step_Size = [0, 0.5, 1]                                     # discrete steps
     Orientation = [0, math.pi / 2, math.pi, 3 * math.pi / 2]    # discrete orientation
@@ -34,8 +34,8 @@ def Round_Simulation(Radius):
             else:
                 Curr_Pos[bot] = (x + dx, y + dy)
 
-            myBot[bot].append(Curr_Pos)
+            myBot[bot].append(Curr_Pos[bot])
 
     return Curr_Pos
 
-print(Round_Simulation(100))
+print("Bots are standing on points:", Round_Simulation(100))
