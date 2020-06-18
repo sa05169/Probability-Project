@@ -28,7 +28,7 @@ Following are the descriptions of each task.
 
 ### Task3
 
-* Simulates a two-dimensional random walk with discrete step-size {0, 0.5, 1} and discrete orientation {North, South, East, West}.
+* Simulates a two-dimensional random walk with discrete step-size {0, 0.5, 1} and discrete orientation {North, South, East, West} inside a circle.
 
 ### Task4
 
@@ -36,11 +36,11 @@ Following are the descriptions of each task.
 
 ### Task5
 
-* Simulates a two-dimensional random walk with continuous step-size 0 - 1 and continuous orientation 0 - 2π.
+* Simulates a two-dimensional random walk with continuous step-size 0 - 1 and continuous orientation 0 - 2π inside a circle.
 
 ### Task7
 
-* Simulates a two-dimensional random walk with discrete step-size {0, 0.5, 1} and continuous orientation 0 - 2π.
+* Simulates a two-dimensional random walk with discrete step-size {0, 0.5, 1} and continuous orientation 0 - 2π inside a circle.
 
 ### Task8
 
