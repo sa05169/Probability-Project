@@ -14,8 +14,8 @@ direction [0 ~ 360].
 """
 
 def Round_Simulation(Radius):
-    Time = 10
-    Bots = 10
+    Time = 100
+    Bots = 100
     
     Curr_Pos = list()
     myBot = list()
@@ -41,4 +41,4 @@ def Round_Simulation(Radius):
 
     return Curr_Pos
 
-print(Round_Simulation(100))
+print("Bots are standing at points:", Round_Simulation(100))
