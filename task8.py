@@ -10,7 +10,7 @@ they model the initial position of the two nodes.
 def Distance(P1, P2):
     x1, y1 = P1
     x2, y2 = P2
-    return math.sqrt((x1 - x2)*2 + (y1 - y2)*2)
+    return math.sqrt((x1 - x2)**2 + (y1 - y2)**2)
     
 
 def Pick_from_Circ(Radius):
@@ -19,8 +19,8 @@ def Pick_from_Circ(Radius):
     return (math.cos(dt) * dr, math.sin(dt) * dr)
 
 def Expected_Time(Radius):
-    Bots = 100
-    Time = 100
+    Bots = 500
+    Time = 500
     
     mybots = list()                     # bots list
     for i in range(Bots):
@@ -44,7 +44,7 @@ def Expected_Time(Radius):
 
             x = x + dx
             y = y + dy
-            r = math.sqrt(x*2 + y*2)
+            r = math.sqrt(x**2 + y**2)
 
             if r > Radius:
                 my_Bots[bot] = (x / r, y / r)

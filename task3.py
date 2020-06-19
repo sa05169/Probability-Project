@@ -9,8 +9,8 @@ direction [0 ~ 360].
 """
 
 def Round_Simulation(Radius):
-    Time = 100
-    Bots = 100
+    Time = 500
+    Bots = 500
     
     Step_Size = [0, 0.5, 1]                                     # discrete steps
     Orientation = [0, math.pi / 2, math.pi, 3 * math.pi / 2]    # discrete orientation
