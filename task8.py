@@ -51,10 +51,10 @@ def Expected_Time(Radius):
             dx = dr * math.cos(dt)
             dy = dr * math.sin(dt)
 
-            if (x + dx)**2 + (y + dy)**2 > Radius**2:
-                my_Bots[bot] = (x - dx, y - dy)
-            else:
-                my_Bots[bot] = (x + dx, y + dy)
+            my_Bots[bot] = (x + dx, y + dy)
+
+            if (x + dx)**2 + (y + dy)**2 > Radius**2:           #Formula mentioned in the write-up
+                my_Bots[bot] = ( (x+dx) / (math.sqrt((x+dx)**2 + (y+dy)**2)), (y+dy) / (math.sqrt((x+dx)**2 + (y+dy)**2)))
             
         return my_Bots
 

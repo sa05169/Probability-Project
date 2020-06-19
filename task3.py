@@ -1,5 +1,6 @@
 import random
 import math
+import numpy
 
 """ ----------------------------------- TASK 3 -----------------------------------------
 Create a two-dimensional random walk model using simulation-based approach within boundaries
@@ -29,10 +30,10 @@ def Round_Simulation(Radius):
             x, y = Curr_Pos[bot]
             dx, dy = dr * math.cos(dt), dr * math.sin(dt)       #Converts the movement into cartesian coordinates
 
-            if (x + dx)**2 + (y + dy)**2 > Radius**2:
-                Curr_Pos[bot] = (x - dx, y - dy)
-            else:
-                Curr_Pos[bot] = (x + dx, y + dy)
+            Curr_Pos[bot] = (x + dx, y + dy)
+
+            if (x + dx)**2 + (y + dy)**2 > Radius**2:           #Formula mentioned in the write-up
+                Curr_Pos[bot] = (1 - (2 * numpy.random.uniform(0.0, 1.0)), 1 - (2 * numpy.random.uniform(0.0, 1.0)))
 
             myBot[bot].append(Curr_Pos[bot])
 
