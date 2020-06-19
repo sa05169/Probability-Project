@@ -33,7 +33,7 @@ def Round_Simulation(Radius):
             Curr_Pos[bot] = (x + dx, y + dy)
 
             if (x + dx)**2 + (y + dy)**2 > Radius**2:           #Formula mentioned in the write-up
-                Curr_Pos[bot] = (1 - (2 * numpy.random.uniform(0.0, 1.0)), 1 - (2 * numpy.random.uniform(0.0, 1.0)))
+                Curr_Pos[bot] = (random.choice([-1,0,1]), random.choice([-1,0,1]))
 
             myBot[bot].append(Curr_Pos[bot])
 
